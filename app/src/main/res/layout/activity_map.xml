@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:context=".MapsActivity" />
+    
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:background="@android:color/background_light"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="55dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNotification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:text="Slide up to view details"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/tv_Latitude"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Latitude"
+                android:textSize="16sp"
+                android:layout_below="@id/tvNotification"/>
+
+            <TextView
+                android:id="@+id/tv_Get_Latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="textView"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/tv_Latitude"
+                android:layout_below="@id/tvNotification"/>
+
+            <TextView
+                android:id="@+id/tv_Longitude"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Longitude"
+                android:textSize="16sp"
+                android:layout_below="@id/tv_Latitude"/>
+
+            <TextView
+                android:id="@+id/tv_Get_Longitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="textView"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/tv_Longitude"
+                android:layout_below="@id/tv_Latitude"/>
+
+            <TextView
+                android:id="@+id/tv_Accuracy"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Accuracy"
+                android:textSize="16sp"
+                android:layout_below="@id/tv_Longitude"/>
+
+            <TextView
+                android:id="@+id/tv_Get_Accuracy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="textView"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/tv_Accuracy"
+                android:layout_below="@id/tv_Longitude"/>
+
+            <TextView
+                android:id="@+id/tv_Speed"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Speed"
+                android:textSize="16sp"
+                android:layout_below="@id/tv_Accuracy"/>
+
+            <TextView
+                android:id="@+id/tv_Get_Speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="textView"
+                android:textSize="16sp"
+                android:layout_toRightOf="@id/tv_Speed"
+                android:layout_below="@id/tv_Accuracy"/>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:elevation="10dp"
+        android:background="@drawable/white_background"
+        android:id="@+id/relLayout1">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:id="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_magnify"/>
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/ic_magnify"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:id="@+id/input_search"
+
+            android:hint="Enter address, city or zip code"
+            android:imeOptions="actionSearch"
+            />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/relLayout1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/ic_gps"
+        android:src="@drawable/ic_gps"
+        />
+
+</android.support.design.widget.CoordinatorLayout>

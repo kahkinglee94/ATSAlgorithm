@@ -1,0 +1,4 @@
+#Tue Nov 06 04:09:49 CST 2018
+base.0=C\:\\Users\\Lee\\Desktop\\NTUST\\Final_Year_Project\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\83
+path.0=classes.dex
+renamed.0=classes.dex
